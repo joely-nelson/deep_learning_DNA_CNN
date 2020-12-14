@@ -1,6 +1,18 @@
-# deep_learning_DNA_CNN
+---
+layout: post
+title: DNA Sequence Classification by CNN
+---
+***Deep Learning Project.*** *Dec 14, 2020*
+<br>
+*By Joely Nelson*
 
 In this project, I developed a convolutional neural network to classify DNA sequences from two data sets. I mimic the architecture of the CNN used in prior work on two different datasets, and achieve close to the paper’s accuracy.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pst4gdwaHEo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Github code](https://github.com/joely-nelson/deep_learning_DNA_CNN)
+
+<!-- more -->
 
 
 ## Intro
@@ -67,7 +79,7 @@ Their model has a 90% train 10% test split, and so the same will be used for thi
 
 
 ## Splice Dataset
-Dataset can be downloaded here: https://archive.ics.uci.edu/ml/datasets/Molecular+Biology+(Splice-junction+Gene+Sequences)
+Dataset can be downloaded [here](https://archive.ics.uci.edu/ml/datasets/Molecular+Biology+(Splice-junction+Gene+Sequences))
 
 This dataset contains information about splice junctions. In genes, regions which are removed during the RNA transcription process are called introns, and regions that are used to generate mRNA are called exons. Junctions between them are called splice junctions. There are two kinds of splice junction that is exon-intron junction, and intron-exon junctions.
 
@@ -125,9 +137,9 @@ This model does 1% better than the one from the paper, implying it classifies 1 
 
 
 ## H3 Dataset
-Dataset can be downloaded here: http://www.jaist.ac.jp/~tran/nucleosome/members.htm
+Dataset can be downloaded [here](http://www.jaist.ac.jp/~tran/nucleosome/members.htm)
 
-The H3 data sets DNA sequences which wrap around histone proteins. It is a mechanism used to pack and store long DNA sequences into a cell’s nucleus. Sequences in this dataset are 500 base pairs long and belong to one of 2 classes: and belong to “Positive” or “Negative” class. Samples in “Positive” class contain regions wrapping around histone proteins. In contrast, samples in “Negative” class do not contain them. There are 7298 examples of the negative class, and 7667 examples of the positive class.
+The H3 data set is of DNA sequences which wrap around histone proteins. It is a mechanism used to pack and store long DNA sequences into a cell’s nucleus. Sequences in this dataset are 500 base pairs long and belong to one of 2 classes: and belong to “Positive” or “Negative” class. Samples in “Positive” class contain regions wrapping around histone proteins. In contrast, samples in “Negative” class do not contain them. There are 7298 examples of the negative class, and 7667 examples of the positive class.
 
 The paper was able to achieve an accuracy of 88.99% for this dataset. I was unable to achieve within less than 5% of this accuracy, here are the models that got closest.
 
@@ -151,7 +163,7 @@ The best accuracy I achieved for the test set was 83.83% (correctly classified 1
 * epochs = 25
 * pool type: 2d pool
 
-Model 2
+### Model 2
 Although this model didn’t achieve as good of a test accuracy as the model above, this one has less issues with overfitting. This had a test accuracy of 82.43% (correctly classified 1234/1497 examples), but this model had overfitting problems with a train accuracy of 85.87% (correctly classified 11565/13468 examples).
 
 * feature_size = 2
@@ -176,3 +188,4 @@ Although this model didn’t achieve as good of a test accuracy as the model abo
 The most important takeaway from this project for me was the importance of hyperparameters. Because the paper did not share the hyperparameters they chose, including the kernel size/stride of their convolutional layers, the learning rate, decay, and momentum, it was extremely difficult to replicate their results. Although I was able to beat the paper’s accuracy slightly for the splice dataset (~1%), I could not achieve the 88% accuracy for the H3 dataset, and instead was only able to get to 82%-83% test accuracy. If I had the paper’s hyperparameters, this would have been much more possible.
 
 Another important note is that models that used 2D max pooling typically did better than models that used 1D max pooling. This may have been a fluke, but if this is a pattern this may be something that should be studied further.
+
