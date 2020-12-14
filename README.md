@@ -55,7 +55,9 @@ I plan to mimic the architecture used in the paper. The description of their arc
 
 In my words, the tokenized input sequence is first put through an encoder. Then it goes through 2 layers that consist of a convolution, a RELU activation, and a max pool. The features are then flattened, and go through a fully connected layer that has an output of 100 features. A softmax is then applied, and the classification provided. 
 
-A visual representation of the network they described
+![](https://joely-nelson.github.io/images/cse590_architecture.png)
+
+*A visual representation of the network described*
 
 Although the paper recognizes the importance of hyperparameters, it does not provide any information about them (such as decay, learning rate, or momentum) nor kernel filters used in the convolutional layers. Trying to replicate the results by trying out different hyperparameters was the bulk of work for this project.
 
