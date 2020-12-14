@@ -1,7 +1,4 @@
----
-layout: post
-title: DNA Sequence Classification by CNN
----
+# DNA Sequence Classification by CNN
 ***Deep Learning Project.*** *Dec 14, 2020*
 <br>
 *By Joely Nelson*
